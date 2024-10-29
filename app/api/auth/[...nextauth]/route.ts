@@ -7,11 +7,8 @@ import userSchema from "@/Schema/userSchema";
 // For Bcryptjs
 import bcrypt from 'bcryptjs'
 
-import NextAuth, { NextAuthOptions, SessionStrategy } from "next-auth";
-import CredentialsProvider from 'next-auth/providers/credentials'
-
-
-type CustomSessionStrategy = SessionStrategy | "jwt"
+import NextAuth, { NextAuthOptions } from "next-auth";
+import CredentialsProvider from 'next-auth/providers/credentials';
 
 export const authOptions: NextAuthOptions = {
     providers: [
@@ -19,54 +16,41 @@ export const authOptions: NextAuthOptions = {
             credentials: {},
             async authorize(credentials) {
                 const { email, password } = credentials as { email: string, password: string };
-                // 
-                try {
 
-                    // 
-                    await ConnectToDb()
+                try {
+                    await ConnectToDb();
                     const userEmailCheck = await userSchema.findOne({ email });
 
-                    // Checking User Email
                     if (!userEmailCheck) {
-                        return null
+                        return null;
                     }
 
-                    // if Email is Verified Then Checking For The Password
                     const isPasswordCorrect = await bcrypt.compare(password, userEmailCheck.password);
-
                     if (!isPasswordCorrect) {
-                        return null
+                        return null;
                     }
 
-
-                    // if Credentials Are Match With The Database then
                     return {
                         id: userEmailCheck._id,
                         email: userEmailCheck.email,
                         name: userEmailCheck.name
-                    }
-
+                    };
                 } catch (error) {
-                    console.log("Auth Error", error)
-                    return null
+                    console.log("Auth Error", error);
+                    return null;
                 }
-
             }
-        }
-        )
+        })
     ],
     session: {
-        strategy: "jwt" as CustomSessionStrategy
+        strategy: "jwt"
     },
     secret: process.env.NEXTAUTH_SECRET,
     pages: {
         signIn: "/",
         signOut: "/"
     }
-}
+};
 
-const handler = NextAuth(authOptions)
-export { handler as GET, handler as POST }
-
-
-
+const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };
