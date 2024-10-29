@@ -1,0 +1,25 @@
+.LoadingWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.LoadingWrapper div:first-child {
+    border: 3px solid #fff;
+    height: 25px;
+    width: 25px;
+    border-radius: 999px;
+    border-top: 3px solid var(--main);
+    animation: Spin 1s linear infinite;
+}
+
+@keyframes Spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

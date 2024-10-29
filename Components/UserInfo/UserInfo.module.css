@@ -1,0 +1,57 @@
+.Info div {
+    text-align: center;
+
+}
+
+.Info h6 {
+    font-weight: 700;
+    font-size: 40px;
+    margin-block: 10px;
+}
+
+
+.Info h6 span {
+    color: antiquewhite;
+}
+
+.Btn {
+    width: max-content;
+    padding: 8px 22px;
+    border-radius: 999px;
+    color: #fff;
+    background: var(--main);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+@media(max-width:790px) {
+    .Info {
+        width: 100%;
+    }
+
+    .Info div {
+        width: 100%;
+    }
+
+    .Info h6 {
+        font-size: 30px;
+    }
+
+    .Btn {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:530px) {
+
+
+    .Info h6 {
+        font-size: 20px;
+    }
+
+    .Btn {
+        font-size: 16px;
+    }
+}

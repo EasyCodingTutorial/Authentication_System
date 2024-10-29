@@ -1,0 +1,84 @@
+.InputBox {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.InputBox label {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.InputBox input {
+    width: 100%;
+    width: 600px;
+    padding: 12px 14px;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 999px;
+    margin-top: 7px;
+}
+
+
+/* For Error Message */
+.ErrorMessage {
+    color: #f00;
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+.InputError {
+    border: 1px solid #f00 !important;
+    color: #f00;
+}
+
+/* For Responsive Style */
+@media(max-width:1200px) {
+    .InputBox input {
+        max-width: 500px;
+    }
+}
+
+@media (max-width:790px) {
+    .InputBox {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .InputBox label {
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    .InputBox input {
+        max-width: 400px !important;
+    }
+}
+
+@media(max-width:590px) {
+    .InputBox label {
+        font-size: 13px;
+    }
+
+    .InputBox input {
+        font-size: 14px;
+        width: 300px;
+    }
+
+}
+
+@media(max-width:420px) {
+    .InputBox label {
+        font-size: 10px;
+    }
+
+    .ErrorMessage {
+        font-size: 10px !important;
+    }
+
+    .InputBox input {
+        font-size: 14px;
+        width: 200px;
+        padding: 8px 10px;
+    }
+
+}
