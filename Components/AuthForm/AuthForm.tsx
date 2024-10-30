@@ -195,16 +195,6 @@ export const AuthForm = () => {
     }
 
 
-    useEffect(() => {
-
-        if (status === 'authenticated') {
-            router.push('/Home')
-        } else {
-            router.push('/')
-        }
-
-    }, [status, session, router])
-
 
     return (
         <div className={styles.Auth}>
