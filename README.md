@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Authentication System Using NEXT_AUTH
+
+In this tutorial, we’ll create a secure authentication system using **NextAuth.js** and **MongoDB** for data persistence. This guide is ideal for developers looking to implement route protection, credential-based login, and data management using modern web technologies without social authentication providers.
+
+## Technologies Used
+ - **Next.js**: A React framework for server-side rendering and static site generation, improving performance and SEO.
+ - **NextAuth.js**: A flexible authentication solution for Next.js applications, allowing us to secure routes and handle session management.
+ - **MongoDB**: A NoSQL database for storing user information securely.
+
+## 📌 In This Video:
+
+- Setting up **NextAuth.js** with custom credentials
+- Implementing route protection to restrict unauthorized access
+- Storing and managing user data in **MongoDB**
+- Following best practices for secure and scalable authentication
+
+## Note: This project is for educational purposes only. Ensure to adhere to security best practices when implementing authentication in production.
 
 ## Getting Started
+Follow these steps to get the project running locally:
 
-First, run the development server:
+1. **Clone** the repository to your local machine.
+2. **Navigate** to the project directory.
+3. Install dependencies by running `npm install` or `yarn install`.
+4. Set up your **MongoDB** connection string in an `.env` file.
+5. Start the development server using `npm run dev` or `yarn dev`.
+6. Access the application in your browser at `http://localhost:3000`.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Contributions
+Contributions are welcome! Feel free to open issues for any bugs, feature requests, or suggestions.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
