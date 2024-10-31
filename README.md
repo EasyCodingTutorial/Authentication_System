@@ -29,3 +29,6 @@ Follow these steps to get the project running locally:
 ## Contributions
 Contributions are welcome! Feel free to open issues for any bugs, feature requests, or suggestions.
 
+## Learn By Watching Video ▶️
+[![Watch Demo Video](https://img.youtube.com/vi/w36x0VDpBWE/maxresdefault.jpg)](https://www.youtube.com/watch?v=w36x0VDpBWE)
+
